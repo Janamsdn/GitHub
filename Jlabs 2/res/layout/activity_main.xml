@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+     oid:layout_height="wrap_content"
+         >
+    
+    <Spinner
+        android:id="@+id/spr_place_type"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:visibility="gone" />
+       <LinearLayout
+                android:id="@+id/BtnLL"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" 
+                android:layout_below="@+id/BtnLL" 
+                android:orientation="horizontal">
+				<Button
+                    android:id="@+id/btn_find"
+                    android:text="@string/str_btn_find"
+                    style ="@style/ButtonTextSmall" 
+                    android:textSize="13sp"
+                    android:background="@drawable/button_blue"
+                    android:clickable="true"
+                    android:layout_weight="1" />
+
+				<Button
+				    android:id="@+id/btn_ShowRestarents"
+				    style="@style/ButtonTextSmall"
+				    android:layout_weight="1"
+				    android:background="@drawable/button_blue"
+				    android:clickable="true"
+				    android:text="@string/str_btn_Show" />
+
+                 </LinearLayout>
+       
+           <LinearLayout
+                android:id="@+id/MapLL"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_below="@+id/BtnLL" 
+                android:orientation="horizontal">
+                 <fragment
+                     android:id="@+id/map"
+                     android:name="com.google.android.gms.maps.SupportMapFragment"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" />
+	
+  </LinearLayout>
+       
+</RelativeLayout>
+
